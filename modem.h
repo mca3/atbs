@@ -13,9 +13,12 @@ struct modem_state {
 	struct serial ser;
 	int dcd;
 
+	char *command;
+
 	int quiet;
 	int echo;
 	int verbose;
+	int baud;
 
 	char registers[8];
 };

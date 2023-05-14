@@ -40,6 +40,8 @@ main(int argc, char *argv[])
 	m.echo = 1;
 	m.verbose = 1;
 	m.registers[AT_REG_TERM] = '\r';
+	m.command = "sh";
+	m.baud = baud;
 
 	serial_new(&m.ser, tty, baud);
 	serial_set_echo(&m.ser, 1);
